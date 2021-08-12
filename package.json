@@ -1,7 +1,7 @@
 {
   "name": "hhfgjdk-d5",
   "version": "1.0.0",
-  "description": "",
+  "description": "A discord bot for didney worl who has an appetite for non-nutritive substances",
   "main": "bot.js",
   "moment": "^2.22.2",
   "canvas": "^2.8.0",
