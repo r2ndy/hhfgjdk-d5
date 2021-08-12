@@ -1,10 +1,21 @@
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
-
+var prefix = "#";
    let points = {}
 //////////////
-const prefix = '#'
+client.on('ready',  () => {
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~ r2ndy ~~~~~~~~~~~');
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+console.log(`Logged in as  * [ "  العاب بوت  " ] servers! [ " ${client.guilds.size} " ] Users! [ " ${client.users.size} " ]`); 
+
+});
+
+///////////
+
   client.on('message', message => {
     if(message.author.bot) return;
             if (!points[message.author.id]) points[message.author.id] = {
@@ -579,7 +590,7 @@ reaction3.on("collect", r => {
     })
 }
 });
-const devs = ["429972030092476437"]
+const devs = ["749064659457409106"]
 
 const adminprefix = "#";
 client.on('message', message => {
