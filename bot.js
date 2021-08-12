@@ -591,58 +591,5 @@ reaction3.on("collect", r => {
 });
 
 
-const adminprefix = "*";
-client.on('message', message => {
 
-
-  if (!message.content.startsWith(prefix)) return;
-  var args = message.content.split(' ').slice(1);
-  var argresult = args.join(' ');
-  if (message.author.id == 444182215476248576) return;
-
-
-if (message.content.startsWith(prefix + 'playing')) {
-if (message.author.id !== '749064659457409106') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
-client.user.setGame(argresult);
-    message.channel.sendMessage(`**${argresult}** : تم تغيير الحالة`)
-} 
-
- 
-if (message.content.startsWith(prefix + 'streem')) {
-if (message.author.id !== '749064659457409106') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
-client.user.setGame(argresult, "http://twitch.tv/y04zgamer");
-    message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
-} else
-
-if (message.content.startsWith(prefix + 'name')) {
-if (message.author.id !== '749064659457409106') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
-  client.user.setUsername(argresult).then
-      message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
-  return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
-} else
-    
-if (message.content.startsWith(prefix + 'image')) {
-if (message.author.id !== '749064659457409106') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
-client.user.setAvatar(argresult);
-    message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
-} else
-
-
-if (message.content.startsWith(prefix + 'watching')) {
-if (message.author.id !== '749064659457409106') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
-    client.user.setActivity(argresult, {type : 'watching'});
- message.channel.sendMessage(`**${argresult}** : تم تغيير الووتشينق الى`)
-}
-    if(message.content === adminprefix + "restart") {
-      if (!devs.includes(message.author.id)) return;
-          message.channel.send(`:warning:️ **Bot restarting by ${message.author.username}**`);
-        console.log("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        console.log(`⚠️ Bot restarting... ⚠️`);
-        console.log("===============================================\n\n");
-        client.destroy();
-        child_process.fork(__dirname + "bot.js");
-        console.log(`Bot Successfully Restarted`);
-    }
-  
-  });
 client.login(process.env.BOT_TOKEN);
