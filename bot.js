@@ -1,23 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const ms = require('ms');
-const fs = require('fs');
-const ytdl = require('ytdl-core');
-const canvas = require('canvas');
-const convert = require('hh-mm-ss');
-const fetchVideoInfo = require('youtube-info');
-const simpleytapi = require('simple-youtube-api');
-const util = require('util');
-const guild = require('guild');
-const hastebins = require('hastebin-gen');
-const getYoutubeID = require('get-youtube-id');
-const pretty = require('pretty-ms');
-const moment = require('moment');
-const request = require('request');
-const dateFormat = require('dateformat');
-
-const jimp = require("jimp");
-   let points = {}
+////////////////////////////////////
    
 const prefix = '*'
   client.on('message', message => {
