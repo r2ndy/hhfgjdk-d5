@@ -24,7 +24,7 @@ console.log(`Logged in as  * [ "  العاب بوت  " ] servers! [ " ${client.g
               if (message.content.startsWith(prefix + 'فكك')) {
                 if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
 
-              const type = require('./fkk.json');
+              const type = require('fkk.json');
               const item = type[Math.floor(Math.random() * type.length)];
            let author = message.author;
               const filter = response => {
