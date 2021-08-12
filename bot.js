@@ -432,8 +432,6 @@ if (message.content.startsWith(prefix + 'top')) {
   	message.channel.sendEmbed(prefixlor)
 }
   
-});
-
 client.on('message', message => {
       if(message.author.bot) return;
 if (message.content.startsWith(prefix + 'نقاطي')) {
@@ -445,18 +443,6 @@ if (message.content.startsWith(prefix + 'نقاطي')) {
 	.setDescription(`نقاطك: \`${userData.points}\``)
 	message.channel.sendEmbed(embed)
   }
-});
-client.on('message', message => {
-  if(message.author.bot) return;
-if (message.content.startsWith(prefix + 'points')) {
-if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
-let userData = points[message.author.id];
-let embed = new Discord.RichEmbed()
-.setAuthor(`${message.author.tag}`, message.author.avatarURL)
-.setColor('#000000')
-.setDescription(`نقاطك: \`${userData.points}\``)
-message.channel.sendEmbed(embed)
-}
 });
 
 
