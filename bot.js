@@ -5,7 +5,7 @@ const Canvas = require("canvas");
 const jimp = require("jimp");
    let points = {}
    
-const prefix = '#'
+const prefix = '*'
   client.on('message', message => {
     if(message.author.bot) return;
             if (!points[message.author.id]) points[message.author.id] = {
@@ -470,7 +470,7 @@ client.on("message", message => {
    🎮*top
 ══════════ஜ۩۞۩ஜ════════════ 
  `)
- .setFooter(`by :@OrochiX#9177`)
+ .setFooter(`by :@.Tranquility#0666`)
    message.channel.sendEmbed(embed)
    
    }
@@ -580,9 +580,9 @@ reaction3.on("collect", r => {
     })
 }
 });
-const devs = ["429972030092476437"]
+const devs = ["749064659457409106"]
 
-const adminprefix = "#";
+const adminprefix = "*";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!devs.includes(message.author.id)) return;
