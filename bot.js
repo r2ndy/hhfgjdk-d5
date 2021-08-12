@@ -1,6 +1,8 @@
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const jimp = require("jimp");
+   let points = {}
 //////////////
 const prefix = '#'
   client.on('message', message => {
