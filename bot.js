@@ -462,6 +462,7 @@ message.channel.sendEmbed(embed)
 
 
 client.on("message", message => {
+ var prefix = "*";
  if (message.content === "*مساعدة") {
         message.react("✅")
            message.react("📬")
@@ -551,13 +552,13 @@ client.on('message' , message => {
  });  
 
 client.on("message", function(message) {
-    var prefix = "#";
+    var prefix = "*";
    if(message.content.startsWith(prefix + "rps")) {
     let messageArgs = message.content.split(" ").slice(1).join(" ");
     let messageRPS = message.content.split(" ").slice(2).join(" ");
     let arrayRPS = ['**# - Rock**','**# - Paper**','**# - Scissors**'];
     let result = `${arrayRPS[Math.floor(Math.random() * arrayRPS.length)]}`;
-    var RpsEmbed = new Discord.RichEmbed()
+    var rpsEmbed = Discord.MessageEmbed()
     .setAuthor(message.author.username)
     .setThumbnail(message.author.avatarURL)
     .addField("Rock","🇷",true)
@@ -592,7 +593,7 @@ reaction3.on("collect", r => {
 });
 const devs = ["749064659457409106"]
 
-const adminprefix = "#";
+const adminprefix = "*";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!devs.includes(message.author.id)) return;
