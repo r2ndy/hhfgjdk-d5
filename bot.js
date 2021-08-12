@@ -1,8 +1,36 @@
+const express = require('express');
+const app = express();
+
+app.listen(() => console.log('Hi.'));
+
+app.use('/ping', (req, res) => {
+    res.send(new Date());
+});
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
-////////////////////////////////////
-   
-const prefix = '*'
+//
+client.on('ready', () => {
+    console.log(`Iam Here...`);
+});
+var prefix = '*'; // البريفكس الي تبيه
+var owners = '749064659457409106';  // حط ايديك
+//
+client.on('ready', () => {
+    console.log(`Logged in as ${client.user.tag}!`);
+});
+client.on('ready', () => {
+    client.user.setStatus('online'); 
+});
+client.on('ready', () => {
+    client.user.setActivity(`${prefix}help.`, {
+        
+        type: 'PLAYING'// الحاله الي تبيها
+    }); 
+});
+
+
+//////////////////
   client.on('message', message => {
     if(message.author.bot) return;
             if (!points[message.author.id]) points[message.author.id] = {
