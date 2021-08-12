@@ -8,12 +8,7 @@ client.on('ready', () => {
 var prefix = '*'; // البريفكس الي تبيه
 var owners = '749064659457409106';  // حط ايديك
 //
-client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag}!`);
-});
-client.on('ready', () => {
-    client.user.setStatus('online'); 
-});
+
 client.on('ready', () => {
     client.user.setActivity(`${prefix}help.`, {
         
