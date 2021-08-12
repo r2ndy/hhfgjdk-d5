@@ -1,7 +1,7 @@
 {
-  "name": "luxurybot",
+  "name": "hhfgjdk-d5",
   "description": "A discord bot for didney worl who has an appetite for non-nutritive substances",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
