@@ -466,7 +466,7 @@ client.on("message", message => {
  if (message.content === "*مساعدة") {
         message.react("✅")
            message.react("📬")
-  const embed = new Discord.RichEmbed() 
+  const embed = Discord.MessageEmbed()
       .setColor("#ffff00")
      .setDescription(`
 ══════════ஜ۩۞۩ஜ════════════  
