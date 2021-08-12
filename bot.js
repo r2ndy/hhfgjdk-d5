@@ -2,9 +2,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 //
-client.on('ready', () => {
-    console.log(`Iam Here...`);
-});
 var prefix = '*'; // البريفكس الي تبيه
 var owners = '749064659457409106';  // حط ايديك
 //
