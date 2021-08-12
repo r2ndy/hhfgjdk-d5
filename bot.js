@@ -579,4 +579,4 @@ reaction3.on("collect", r => {
 
 
 
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.TOKEN_BOT);
