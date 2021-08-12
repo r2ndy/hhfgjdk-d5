@@ -431,7 +431,8 @@ if (message.content.startsWith(prefix + 'top')) {
    
   	message.channel.sendEmbed(prefixlor)
 }
-  
+  });
+
 client.on('message', message => {
       if(message.author.bot) return;
 if (message.content.startsWith(prefix + 'نقاطي')) {
